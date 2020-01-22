@@ -1,26 +1,143 @@
+@font-face {
+    src: url(../fonts/Merriweather/Merriweather-Regular.ttf);
+    font-family: Merriweather;
+}
+
+@font-face {
+    src: url(../fonts/Merriweather/Merriweather-Light.ttf);
+    font-family: Merriweather-Light;
+}
+
+@font-face {
+    src: url(../fonts/Merriweather/Merriweather-Bold.ttf);
+    font-family: Merriweather-Bold;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .main {
+    height: 100%;
+    width: 100vw;
+    max-width: 100%;
+
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    align-items: center;
     margin: 0;
-    background-color: #e8ffe8;
 }
 
 /*      Header Content  */
 
 .head-container  {
+    height: 75px;
+    width: 100%;
+
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: white;
+    border-bottom: solid 2px #E0E0E0;
+}
+
+#name {
+    font-family: Merriweather-Bold;
+}
+
+.links a {
+    font-family: Merriweather;
+    color: black;
+    text-decoration: none;
+    outline: none;
+    margin: 10px;
+}
+
+/*      "Modules"  */
+
+.subject-info-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 250px;
-    width: 100vw;
-    background-color: #74f9ff;
 }
 
-#prof-pic {
-    height: 150px;
-    width: 150px;
-    border-radius: 100px;
+.subject-title {
+    font-family: Merriweather-Bold;
+    margin: 25px 0 15px 0;
+}
+
+.subject-desc {
+    font-family: Merriweather-Light;
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+/*      Websites Content  */
+
+#websites {
+    height: 100%;
+    width: 100%;
+    padding-top: 77px; /* this needs to be the same height as head-container and border */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.website-container {
+    height: 325px;
+    width: 55%;
+    margin: 25px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+
+}
+
+.web-image {
+    height: 225px;
+    width: 350px;
+
+    transition: all 0.3s;
+}
+.web-image:hover {
+    transform: scale(1.05);
+}
+
+.web-info-container {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+}
+
+.web-title {
+    font-size: 32px;
+    font-family: Merriweather-Bold;
+    font-weight: normal;
+    margin: 0;
+}
+
+.web-desc {
+    font-size: 18px;
+    font-family: Merriweather-Light;
+    word-wrap: normal;
+}
+
+/*      Projects Content  */
+
+#projects {
+    height: 1200px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }

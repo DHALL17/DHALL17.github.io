@@ -31,11 +31,11 @@ html {
 /*      Header Content  */
 
 .head-container  {
-    height: 75px;
     width: 100%;
 
     display: flex;
     position: fixed;
+    flex-wrap: wrap;
     z-index: 999;
     justify-content: space-around;
     align-items: center;
@@ -48,12 +48,26 @@ html {
     font-family: Merriweather-Bold;
 }
 
+.links {
+    height: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .links a {
     font-family: Merriweather;
     color: black;
     text-decoration: none;
     outline: none;
     margin: 10px;
+
+    transition: color 0.1s;
+}
+.links a:hover,
+.links a:focus {
+    color: rgba(0,0,0, 50%);
 }
 
 /*      "Modules"  */
@@ -71,6 +85,7 @@ html {
 }
 
 .subject-desc {
+    text-align: center;
     font-family: Merriweather-Light;
     margin: 10px 0;
     font-weight: normal;
@@ -91,14 +106,13 @@ html {
 
 .website-container {
     height: 325px;
-    width: 55%;
+    width: 75%;
     margin: 25px 0;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-
 }
 
 .web-image {
@@ -121,7 +135,6 @@ html {
     font-size: 32px;
     font-family: Merriweather-Bold;
     font-weight: normal;
-    margin: 0;
 }
 
 .web-desc {
@@ -140,4 +153,56 @@ html {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+/*      Dynamic Adjustments  */
+
+
+.website-container2 {
+    height: 100%;
+    width: 100%;
+    margin: 50px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+.web-image2 {
+    max-height: 630px;
+    width:  1120px;
+    max-width: 96vw;
+
+    border-radius: 8px;
+}
+
+.web-info-container2 {
+    display: flex;
+    width: 840px;
+    max-width: 72vw;
+    flex-direction: column;
+    margin-top: -55px;
+
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.5);
+}
+
+.web-title2 {
+    max-width: 100%;
+    font-size: 32px;
+    font-family: Merriweather-Bold;
+    font-weight: normal;
+    margin: 25px 0 0 0;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    border-bottom: solid 1px #E0E0E0;
+}
+
+.web-desc2 {
+    font-size: 18px;
+    font-family: Merriweather-Light;
+    word-wrap: normal;
 }
